@@ -1,0 +1,33 @@
+# Framework-readable endpoint policy catalog. Services enforce RBAC separately.
+endpoint_groups:
+  auth:
+    sensitivity: high
+    allowed_roles: [student, faculty, admin]
+  announcements:
+    sensitivity: low
+    allowed_roles: [student, faculty, admin]
+  courses:
+    sensitivity: low
+    allowed_roles: [student, faculty, admin]
+  grades:
+    sensitivity: high
+    allowed_roles: [student, faculty, admin]
+  attendance:
+    sensitivity: high
+    allowed_roles: [student, faculty, admin]
+  assignments:
+    sensitivity: medium
+    allowed_roles: [student, faculty, admin]
+  records:
+    sensitivity: high
+    allowed_roles: [student, faculty, admin]
+  records_export:
+    sensitivity: critical
+    allowed_roles: [admin]
+  exam_papers:
+    sensitivity: critical
+    allowed_roles: [faculty, admin]
+  admin:
+    sensitivity: critical
+    allowed_roles: [admin]
+
